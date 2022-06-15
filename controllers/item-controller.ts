@@ -19,16 +19,12 @@ export let items = [
 ];
 
 export const getItems = (_req: FastifyRequest, reply: FastifyReply) => {
-  console.log(items);
-
   reply.send(items);
 };
 
 export const getItem = (req: FastifyRequest, reply: FastifyReply) => {
   const { id } = req.params as MyFastifyRequest;
   const item = items.find((item: Item) => item.id === id);
-  console.log(item);
-
   reply.send(item);
 };
 
@@ -47,8 +43,6 @@ export const updateItem = (req: FastifyRequest, reply: FastifyReply) => {
   const { name } = req.body as MyFastifyRequest;
 
   items = items.map((item) => (item.id === id ? { id, name } : item));
-  console.log(items);
-
   const item = items.find((item) => item.id === id);
   reply.send(item);
 };

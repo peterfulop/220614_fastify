@@ -1,7 +1,6 @@
 import fastify from 'fastify';
 import pino from 'pino';
 import { itemRoutes } from './routes/item-routes';
-import * as a from '@fastify/swagger';
 
 const app = fastify({ logger: pino({ level: 'info' }) });
 

@@ -1,5 +1,4 @@
 import { FastifyRequest } from 'fastify';
-import { FastifyRequestType } from 'fastify/types/type-provider';
 
 export interface Item {
   id: string;
